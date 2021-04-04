@@ -1,0 +1,15 @@
+============
+main:
+	call sleep2 5
+	return OS
+============
+sleep2(5):
+	interrupted by sig_int
+	return MAIN
+============
+sig_int
+	interrupted by SIGALRM from sleep2
+============
+sig_alrm
+	return SLEEP2
+============
